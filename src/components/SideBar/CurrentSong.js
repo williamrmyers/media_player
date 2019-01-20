@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './SideBar.css'
 
 class CurrentSong extends React.Component {
 
@@ -13,7 +14,7 @@ class CurrentSong extends React.Component {
 
   render() {
     return(
-      <div>Playing: {this.renderSong().title}</div>
+      <div className="current-song">Playing: {this.renderSong().title}</div>
     );
   }
 }

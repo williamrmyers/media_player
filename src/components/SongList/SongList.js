@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { selectSong } from '../actions';
+import { selectSong } from '../../actions';
 import './SongList.css';
 
 class SongList extends React.Component {
@@ -8,7 +8,7 @@ class SongList extends React.Component {
   renderSongs = (props) => {
     console.log(this.props);
      return this.props.songs.map((song) => (
-       <div onClick={() => this.props.selectSong(song)} key={song.title} className="ui segment song-list-item">
+       <div onClick={() => this.props.selectSong(song)} key={song.title} className="ui song-list-item">
          <p><strong>{song.title}</strong>  {song.artist} - {song.album}</p>
        </div>
      )
@@ -18,7 +18,7 @@ class SongList extends React.Component {
   render() {
     // console.log('props',this.props);
     return (
-      <div className="twelve wide column">
+      <div className="thirteen wide column">
         {this.renderSongs()}
       </div>
     );

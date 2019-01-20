@@ -5,8 +5,7 @@ import './SideBar.css'
 
 const SideBar = () => {
   return(
-    <div className="four wide column side-bar">
-        Sidebar
+    <div className="three wide column side-bar">
         <CurrentSong />
         <Controller />
     </div>
