@@ -3,7 +3,13 @@ import faker from 'faker';
 
 let songs = [];
 for (var i = 0; i < 100; i++) {
-  songs.push({title: faker.fake("{{lorem.word}}"), album: faker.fake("{{lorem.word}}"), artist: faker.fake("{{lorem.word}}")})
+  songs.push({
+    title: `${faker.fake("{{lorem.word}}")} ${faker.fake("{{lorem.word}}")}`,
+    album: faker.fake("{{lorem.word}}"),
+    artist: faker.fake("{{lorem.word}}"),
+    id: i,
+    albumArt:  faker.fake("{{image.abstract}}")
+  })
 }
 
 const songsReducer = () => {

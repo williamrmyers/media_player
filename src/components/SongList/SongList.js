@@ -8,8 +8,8 @@ class SongList extends React.Component {
   renderSongs = (props) => {
     console.log(this.props);
      return this.props.songs.map((song) => (
-       <div onClick={() => this.props.selectSong(song)} key={song.title} className="ui song-list-item">
-         <p><strong>{song.title}</strong>  {song.artist} - {song.album}</p>
+       <div onClick={() => this.props.selectSong(song)} key={song.id} className="ui song-list-item">
+         <p><strong>{song.title}</strong> -  {song.artist} - {song.album}</p>
        </div>
      )
    )
