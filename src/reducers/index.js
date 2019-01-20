@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
+import faker from 'faker';
 
-const songs = [
-  {title: "Minted", album: "Minted", artist: "star slinger"},
-  {title: "Extra Time", album: "Minted", artist: "star slinger"},
-  {title: "Gimmie", album: "Minted", artist: "star slinger"},
-];
+let songs = [];
+for (var i = 0; i < 100; i++) {
+  songs.push({title: faker.fake("{{lorem.word}}"), album: faker.fake("{{lorem.word}}"), artist: faker.fake("{{lorem.word}}")})
+}
 
 const songsReducer = () => {
   return {
