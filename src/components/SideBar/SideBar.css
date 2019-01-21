@@ -3,7 +3,7 @@
   background-image: linear-gradient(-180deg, #8706CD 0%, #DF7F79 100%);
   height:1000px;
 }
-.current-song {
+.bar {
   color: white;
   background-color: #1A1919;
   height: 69px;
