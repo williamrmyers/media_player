@@ -11,13 +11,13 @@ class SongList extends React.Component {
         key={song.id}
         className="song-list-item"
       >
-        <p>{`${song.title}       ${song.artist} ${song.album}`}</p>
+        <p>{`${song.title} - ${song.artist} - ${song.album}`}</p>
       </div>
     ));
   };
 
   render() {
-    return <div className="ui thirteen wide column centered">{this.renderSongs()}</div>;
+    return <div className="ui thirteen wide column centered song-list">{this.renderSongs()}</div>;
   }
 }
 
