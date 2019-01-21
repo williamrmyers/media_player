@@ -14,6 +14,14 @@
   left: 0;
   width: 100%;
 }
+.bar .album-art {
+  float: left;
+}
+
+.current-song-title {
+  padding-top: 25px;
+  padding-left: 100px;
+}
 
 /*.controller {
   position: absolute;

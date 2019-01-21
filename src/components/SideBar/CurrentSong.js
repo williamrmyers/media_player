@@ -1,23 +1,19 @@
 import React from 'react';
-import Controller from './Controller';
 import { connect } from 'react-redux';
 import './SideBar.css'
 
 class CurrentSong extends React.Component {
 
-  renderSong = () => {
-    if (!this.props.song) {
-      return ("--");
-    } else {
-      return (this.props.song);
-    }
-  }
-
   render() {
+
+    if (!this.props.song.title) {
+      return (<div>--</div>);
+    }
+
     return(
       <div className="current-song">
-        Playing: {this.renderSong().title}
-        <Controller />
+        <img className="album-art" src={this.props.song.albumArt} alt="Album Art" height="69" width="69" />
+        <div className="current-song-title">Playing: {this.props.song.title}</div>
       </div>
     );
   }

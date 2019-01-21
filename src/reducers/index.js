@@ -8,7 +8,7 @@ for (var i = 0; i < 100; i++) {
     album: faker.fake("{{lorem.word}}"),
     artist: faker.fake("{{lorem.word}}"),
     id: i,
-    albumArt:  faker.fake("{{image.abstract}}")
+    albumArt:  faker.fake("{{image.image}}")
   })
 }
 
