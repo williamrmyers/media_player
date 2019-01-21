@@ -4,3 +4,9 @@ export const selectSong = (song) => {
     payload: song
   }
 }
+
+export const pause = (song) => {
+  return {
+    type: 'PAUSE'
+  }
+}

@@ -27,7 +27,19 @@ const selectSongReducer = (state={}, action) => {
   }
 }
 
+const pauseReducer = (state=true, action) => {
+  switch(action.type) {
+    case 'SELECT_SONG':
+      return false;
+    case 'PAUSE':
+      return state? false : true;
+  default:
+      return state;
+  }
+}
+
 export default combineReducers({
   songs: songsReducer,
-  selectedSong: selectSongReducer
+  selectedSong: selectSongReducer,
+  paused: pauseReducer
 })

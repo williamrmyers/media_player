@@ -20,7 +20,8 @@
 
 .current-song-title {
   padding-top: 25px;
-  padding-left: 100px;
+  padding-left: 20px;
+  float: left;
 }
 
 /*.controller {

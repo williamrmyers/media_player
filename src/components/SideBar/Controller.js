@@ -1,19 +1,20 @@
 import React from "react";
+import { pause } from '../../actions';
 import "./SideBar.css";
 
-const Controller = () => {
+import { connect } from 'react-redux';
+
+
+
+const Controller = (props) => {
+  const icon = props.paused ? "play icon" : "pause icon";
+
   return (
     <div className="controller">
       <div className="centered">
         <div className="ui buttons ">
-          <button className="ui icon button inverted teal">
-            <i className="left chevron icon" />
-          </button>
-          <button className="ui button inverted teal">
-            <i className="play icon" />
-          </button>
-          <button className="ui icon button inverted teal">
-            <i className="right chevron icon" />
+          <button onClick={() => props.pause()} className="ui button inverted teal">
+            <i className={icon} />
           </button>
         </div>
       </div>
@@ -21,4 +22,10 @@ const Controller = () => {
   );
 };
 
-export default Controller;
+const mapStateToProps = (state) => {
+  return { paused: state.paused }
+}
+
+export default connect(mapStateToProps, {
+  pause: pause
+})(Controller);
