@@ -7,7 +7,7 @@ class CurrentSong extends React.Component {
   render() {
 
     if (!this.props.song.title) {
-      return (<div>--</div>);
+      return (<div className="current-song">--</div>);
     }
 
     return(

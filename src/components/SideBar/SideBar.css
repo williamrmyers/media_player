@@ -24,11 +24,7 @@
   float: left;
 }
 
-/*.controller {
-  position: absolute;
-  left: 0;
-  top: 500px;
-  width: 242px;
-  background-color: black;
-  height: 157px;
-}*/
+.controller {
+  padding-top: 16px;
+  padding-left: 270px;
+}
