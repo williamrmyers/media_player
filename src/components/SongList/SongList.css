@@ -9,3 +9,11 @@
   height: 40px;
   padding-top: 8px;
 }
+.song-list-item:hover
+{
+  color: #6dffff;
+}
+
+.input-column {
+  width: 1000px;
+}

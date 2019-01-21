@@ -22,9 +22,10 @@
   padding-top: 25px;
   padding-left: 20px;
   float: left;
+  width: 200px;
 }
 
 .controller {
   padding-top: 16px;
-  padding-left: 270px;
+  padding-left: 20px;
 }

@@ -1,12 +1,11 @@
 import React from 'react';
-import SideBar from './SideBar/SideBar';
 import Bar from './SideBar/Bar';
 import SongList from './SongList/SongList';
+import './App.css';
 
 const App = () => {
   return(
-    <div className="ui equal width grid">
-      <SideBar />
+    <div className="ui equal width grid app">
       <Bar />
       <SongList />
     </div>
