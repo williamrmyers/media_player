@@ -6,18 +6,33 @@ import "./SongList.css";
 class SongList extends React.Component {
   renderSongs = props => {
     return this.props.songs.map(song => (
-      <div
+      <tr
         onClick={() => this.props.selectSong(song)}
         key={song.id}
         className="song-list-item"
       >
-        <p>{`${song.title} - ${song.artist} - ${song.album}`}</p>
-      </div>
+          <td>{song.title}</td>
+          <td>{song.artist}</td>
+          <td>{song.album}</td>
+      </tr>
     ));
   };
 
   render() {
-    return <div className="ui thirteen wide column centered song-list">{this.renderSongs()}</div>;
+    return (
+      <div className="ui thirteen wide column centered">
+        <table>
+          <div className="song-list">
+            <tr className="song-list-item">
+              <th>Song</th>
+              <th>Artist</th>
+              <th>Album</th>
+            </tr>
+            {this.renderSongs()}
+          </div>
+        </table>
+      </div>
+    );
   }
 }
 
