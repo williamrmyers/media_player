@@ -7,11 +7,10 @@ class SongList extends React.Component {
   renderSongs = props => {
     return this.props.songs.map(song => (
       <tr
-        onClick={() => this.props.selectSong(song)}
         key={song.id}
-        className="song-list-item"
-      >
-          <td>{song.title}</td>
+        className={ this.props.selectedSong.title === song.title ? "playing song-list-item" : "song-list-item"}
+        >
+          <td onClick={() => this.props.selectSong(song)}>{song.title}</td>
           <td>{song.artist}</td>
           <td>{song.album}</td>
       </tr>
@@ -37,7 +36,10 @@ class SongList extends React.Component {
 }
 
 const mapStateToProps = state => {
-  return { songs: state.songs.songs };
+  return {
+    songs: state.songs.songs,
+    selectedSong: state.selectedSong
+   };
 };
 
 export default connect(
